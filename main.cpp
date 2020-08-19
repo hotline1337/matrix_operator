@@ -20,7 +20,7 @@ struct Matrix {
 Matrix exp_pow(Matrix a, int k) {
 	Matrix total;
 	for (int i = 0; i < (2); i++) {
-    	total.a[i][i] = 1;
+    		total.a[i][i] = 1;
 	}
 	while (k > 0) {
 		if (k % 2) {
@@ -32,12 +32,13 @@ Matrix exp_pow(Matrix a, int k) {
 	return total;
 }
 
-string extractInt(string str)
-{
+string extractInt(string str) {
 	size_t i = 0;
-	for ( ; i < str.length(); i++ ){ if ( isdigit(str[i]) ) break; }
-
-		str = str.substr(i, str.length() - i );
+	for (; i < str.length(); i++ ) { 
+		if (isdigit(str[i])) 
+			break; 
+	}
+	str = str.substr(i, str.length() - i );
 
 	int id = atoi(str.c_str());
 
